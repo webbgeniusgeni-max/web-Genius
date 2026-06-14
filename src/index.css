@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-brand-mint: #e1fbf2;
+  --color-brand-emerald: #059669;
+  --color-brand-teal: #0d9488;
+  --color-brand-teal-light: #14b8a6;
+  --color-brand-teal-dark: #0f766e;
+  --color-brand-charcoal: #111827;
+  --color-brand-graphite: #050707;
+  --color-brand-black: #000000;
+  --color-brand-gray: #f9fafb;
+  --color-brand-muted: #9ca3af;
+  --color-brand-border: rgba(255, 255, 255, 0.1);
+
+  --animate-pulse-slow: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  --animate-glow: glow 2s ease-in-out infinite alternate;
+}
+
+@layer base {
+  body {
+    @apply bg-[#050707] text-gray-200 font-sans antialiased selection:bg-teal-500/30 selection:text-teal-200 overflow-x-hidden;
+  }
+}
+
+/* Custom premium scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050707;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 9999px;
+  border: 2px solid #050707;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0d9488;
+}
+
+/* Background grid accent */
+.bg-grid-cyber {
+  background-size: 40px 40px;
+  background-image: linear-gradient(to right, rgba(13, 148, 136, 0.03) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(13, 148, 136, 0.03) 1px, transparent 1px);
+}
+
+.bg-dot-cyber {
+  background-size: 24px 24px;
+  background-image: radial-gradient(rgba(13, 148, 136, 0.06) 1.5px, transparent 1.5px);
+}
+
+/* Glassmorphism utility classes matching "Frosted Glass" theme precisely */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-panel-hover {
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.glass-panel-hover:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(20, 184, 166, 0.3);
+  box-shadow: 0 12px 40px -12px rgba(20, 184, 166, 0.12);
+  transform: translateY(-2px);
+}
+
+.text-gradient {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(135deg, #ffffff 30%, #2dd4bf 100%);
+}
+
+.text-gradient-teal {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(135deg, #2dd4bf 0%, #14b8a6 50%, #0f766e 100%);
+}
+

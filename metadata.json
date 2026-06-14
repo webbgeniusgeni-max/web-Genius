@@ -1,0 +1,6 @@
+{
+  "name": "WebGenius",
+  "description": "Premium web design and high-performance websites for local businesses.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
